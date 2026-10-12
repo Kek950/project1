@@ -338,7 +338,9 @@ section.bestSelling {
     .owl-carousel {
       display: flex;
       flex-direction: column;
+      margin-top: 40px;
       margin-bottom: 240px;
+      width: 100%;
       height: fit-content !important;
       .card {
         display: flex;
@@ -421,16 +423,19 @@ section.bestSelling {
   height: 50px;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
   &.l {
-    left: -25px;
+    left: -20px;
   }
   &.r {
-    right: 0;
+    right: -20px;
   }
 }
 
@@ -745,10 +750,12 @@ section.clientsReviews {
       color: #1e1e1e;
     }
     .carousel2 {
+      margin-top: 40px;
       margin-bottom: 240px;
       max-width: 1248px;
       width: 100%;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
       .owl-stage-outer {
         overflow-y: visible !important;
         min-height: 600px;
@@ -1129,3 +1136,369 @@ footer {
     }
   }
 }
+
+/* ==========================================================================
+   Responsive Adaptations & Mobile Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1380px) {
+  nav {
+    max-width: 95%;
+    padding: 0 16px;
+  }
+
+  section.fullwidth.fw1 .container-fluid,
+  section.fullwidth.fw2 .container-fluid {
+    width: 95%;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  nav .links {
+    gap: 32px;
+  }
+
+  header .container h1 {
+    font-size: 56px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  header .container .info {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  section.choosingUs .container {
+    height: auto;
+    flex-direction: column;
+    padding: 60px 24px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  section.choosingUs .container .title {
+    width: 100%;
+    align-items: center;
+  }
+
+  section.choosingUs .container .cards {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.fullwidth.fw1 {
+    padding-top: 100px;
+  }
+
+  section.fullwidth.fw1 .container-fluid {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  section.fullwidth.fw1 .container-fluid .leftSide {
+    width: 100%;
+    max-width: 600px;
+    height: 420px;
+    margin: 0 auto;
+  }
+
+  section.fullwidth.fw1 .container-fluid .leftSide img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+  }
+
+  section.fullwidth.fw1 .container-fluid .leftSide .grayblock,
+  section.fullwidth.fw1 .container-fluid .leftSide .ambientLight,
+  section.fullwidth.fw1 .container-fluid .leftSide .backdrop-filter {
+    display: none;
+  }
+
+  section.fullwidth.fw1 .container-fluid .rightSide {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  section.fullwidth.fw2 .container-fluid {
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  section.fullwidth.fw2 .container-fluid .leftSide {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inLine {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inLine .grayblock {
+    width: 48%;
+    height: auto !important;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inLine .grayblock .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inLine .grayblock .ambientLight,
+  section.fullwidth.fw2 .container-fluid .rightSide .inLine .grayblock .blur {
+    display: none;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition {
+    width: 100%;
+    height: auto;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition .grayblocks.g3 {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition .grayblocks.g3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition .grayblocks.g4,
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition .ambientLight,
+  section.fullwidth.fw2 .container-fluid .rightSide .inPosition .backdrop-filter {
+    display: none;
+  }
+
+  section.clientsReviews {
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+
+  section.clientsReviews .container h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  footer {
+    height: auto;
+    padding: 60px 24px;
+  }
+
+  footer .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 40px;
+  }
+
+  footer .container .title {
+    margin-right: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .container .title p {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  footer .container .gridbox {
+    width: 100%;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 10px;
+    padding: 10px 16px;
+  }
+
+  nav.show {
+    padding: 10px 16px;
+  }
+
+  nav .links {
+    gap: 16px;
+  }
+
+  nav .links a,
+  nav .links .dropdown-link {
+    font-size: 14px;
+  }
+
+  nav .logo a {
+    font-size: 22px;
+  }
+
+  header .container {
+    padding-top: 120px;
+  }
+
+  header .container h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  header .container .info {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  header .container .search {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  section.bestSelling {
+    padding-top: 30px;
+  }
+
+  section.bestSelling .container {
+    padding: 0 16px;
+    margin-top: 20px;
+  }
+
+  section.bestSelling .container h2 {
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  section.bestSelling .container .filter {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+  }
+
+  section.bestSelling .container .filter .filter-btn {
+    width: 70px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  section.bestSelling .container .owl-carousel {
+    margin-top: 24px;
+    margin-bottom: 80px;
+  }
+
+  section.bestSelling .container .owl-carousel .card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  section.bestSelling .container .owl-carousel .card .slide {
+    max-width: 100%;
+  }
+
+  .sign {
+    width: 38px;
+    height: 38px;
+  }
+
+  .sign svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sign.l {
+    left: 4px;
+  }
+
+  .sign.r {
+    right: 4px;
+  }
+
+  section.clientsReviews .container .carousel2 {
+    margin-top: 24px;
+    margin-bottom: 80px;
+    padding: 0 8px;
+  }
+
+  section.clientsReviews .container .carousel2 .card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  section.clientsReviews .container .carousel2 .owl-stage-outer {
+    min-height: 520px;
+  }
+
+  footer .container .gridbox {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  footer .container .gridbox .sc1,
+  footer .container .gridbox .sc2,
+  footer .container .gridbox .sc3 {
+    justify-self: center;
+    align-items: center;
+  }
+
+  .modal .inner {
+    width: 92%;
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .links {
+    gap: 10px;
+  }
+
+  nav .links a:not(:first-child),
+  nav .links .dropdown-link {
+    font-size: 13px;
+  }
+
+  header .container h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
